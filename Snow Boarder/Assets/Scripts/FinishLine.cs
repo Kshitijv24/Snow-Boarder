@@ -9,6 +9,7 @@ public class FinishLine : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             finishEffect.Play();
             Invoke("ReloadScene", 1f);
         }
